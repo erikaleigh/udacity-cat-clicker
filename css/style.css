@@ -1,0 +1,23 @@
+h1, p {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+.container {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+}
+
+.row {
+	width: 100%
+	flex-wrap: wrap;
+}
+
+.col-12 {
+	width: 100%;
+}
+
+.col-6 {
+  width: 50%;
+}
