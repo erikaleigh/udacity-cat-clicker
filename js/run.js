@@ -1,4 +1,4 @@
-var elem = document.getElementById('kittenOne');
+var elem = document.getElementById('catOne');
 var clickCount = document.getElementById('clicks');
 var num = 0;
 
