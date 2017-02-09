@@ -1,16 +1,23 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 h1, p {
   font-family: 'Open Sans', sans-serif;
-  text-align: center;
 }
 
 .container {
 		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
+    justify-content: center;
 }
 
 .row {
-	width: 100%
+	width: 100%;
 	flex-wrap: wrap;
 }
 
@@ -20,4 +27,8 @@ h1, p {
 
 .col-6 {
   width: 50%;
+}
+
+.col-4 {
+  width: 33.3%;
 }
