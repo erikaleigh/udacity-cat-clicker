@@ -14,29 +14,30 @@ var kitties = [{
 
 // append cats
 var appendCats = function() {
-  var catDiv = document.getElementById("cat");
+  var catDiv = document.getElementById("catHouse");
 
   for (var i = 0; i < kitties.length; i++) {
 
+    var catEntry = document.createElement('div');
+    catEntry.id = 'cat';
+    catEntry.className = 'col-6';
+    catDiv.appendChild(catEntry);
+
     var catName = document.createElement('h3');
     catName.innerHTML = kitties[i].name;
-    catDiv.appendChild(catName);
+    catEntry.appendChild(catName);
 
     var catClicks = document.createElement('p');
     catClicks.innerHTML = kitties[i].clicks;
-    catDiv.appendChild(catClicks);
+    catEntry.appendChild(catClicks);
 
     var catImg = document.createElement('img');
     catImg.src = kitties[i].img;
-    catDiv.appendChild(catImg);
-
-
+    catEntry.appendChild(catImg);
   }
-
 }
   appendCats();
 
-var catName = '<h4></h4>'
 
 
 
