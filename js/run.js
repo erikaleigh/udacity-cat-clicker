@@ -33,20 +33,19 @@ var appendCats = function() {
 
     var catImg = document.createElement('img');
     catImg.src = kitties[i].img;
+    catImg.id = 'catImg'
     catEntry.appendChild(catImg);
   }
 }
   appendCats();
 
 
-
-
 // // event listener - counts the amount of clicks on a cat
-// var elem = document.getElementById('catOne');
-// var clickCount = document.getElementById('clicks');
-// var num = 0;
-//
-// elem.addEventListener('click', function(){
-//       num++;
-//       clicks.innerHTML = num;
-// },false);
+var elem = document.getElementById('catImg');
+var clickCount = document.getElementById('clicks');
+var num = 0;
+
+elem.addEventListener('click', function(){
+      num++;
+      clicks.innerHTML = num;
+},false);
