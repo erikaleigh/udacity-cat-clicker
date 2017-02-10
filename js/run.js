@@ -28,6 +28,7 @@ var appendCats = function() {
     catEntry.appendChild(catName);
 
     var catClicks = document.createElement('p');
+    catClicks.id = 'clickCount';
     catClicks.innerHTML = kitties[i].clicks;
     catEntry.appendChild(catClicks);
 
@@ -40,12 +41,30 @@ var appendCats = function() {
   appendCats();
 
 
-// // event listener - counts the amount of clicks on a cat
-var elem = document.getElementById('catImg');
-var clickCount = document.getElementById('clicks');
-var num = 0;
+// event listener - counts the amount of clicks on a cat
 
-elem.addEventListener('click', function(){
-      num++;
-      clicks.innerHTML = num;
-},false);
+/* event listener function:
+  - target "catImg" id with var elem
+  - loop - for every (catImg) entry, do the following:
+    - event listen for click - var elem
+    - when click happens, run function:
+      - take # from clickCount
+      - increase by 1 - ++
+      - return new value
+      - append new value in catClicks.innerHTML (?)
+*/
+
+var clickListen = function() {
+  var elem = document.getElementById('catImg');
+  var clickCount = document.getElementById('clickCount');
+  var num = clickCount.innerHTML;
+
+
+  for (i = 0; i < elem.length; i++) {
+    elem.addEventListener('click', function(){
+        num++;
+
+  },false);
+}
+clickListen();
+}
