@@ -5,19 +5,21 @@
   box-sizing: border-box;
 }
 
-h1, p {
+h1, h4, p {
   font-family: 'Open Sans', sans-serif;
+  text-align: center;
 }
 
 .container {
 		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
-    justify-content: center;
+    overflow: hidden;
 }
 
 .row {
 	width: 100%;
+  display: flex;
 	flex-wrap: wrap;
 }
 
