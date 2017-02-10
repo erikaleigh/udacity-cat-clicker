@@ -1,7 +1,6 @@
 
 // Cats object
-var kitties = {
-  "cats": [{
+var kitties = [{
     "name": "Oryx",
     "img": "img/oryx.jpg",
     "index": 1,
@@ -12,17 +11,26 @@ var kitties = {
     "index": 2,
     "clicks": 0
   }]
-  };
 
 // append cats
 var appendCats = function() {
   var catDiv = document.getElementById("cat");
 
-  for (var i = 0; i < kitties.cats.length; i++) {
+  for (var i = 0; i < kitties.length; i++) {
 
     var catName = document.createElement('h3');
-    catName.innerHTML = this.name[i];
+    catName.innerHTML = kitties[i].name;
     catDiv.appendChild(catName);
+
+    var catClicks = document.createElement('p');
+    catClicks.innerHTML = kitties[i].clicks;
+    catDiv.appendChild(catClicks);
+
+    var catImg = document.createElement('img');
+    catImg.src = kitties[i].img;
+    catDiv.appendChild(catImg);
+
+
   }
 
 }
