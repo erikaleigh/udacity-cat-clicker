@@ -1,0 +1,22 @@
+{
+  "name": "cat-clicker",
+  "version": "1.0.0",
+  "description": "In-course project for [Udacity's Front-End Web Developer Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001).",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erikaleigh/udacity-cat-clicker.git"
+  },
+  "author": "Erika LeBlanc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erikaleigh/udacity-cat-clicker/issues"
+  },
+  "homepage": "https://github.com/erikaleigh/udacity-cat-clicker#readme",
+  "devDependencies": {
+    "grunt-mkdir": "^1.0.0"
+  }
+}
