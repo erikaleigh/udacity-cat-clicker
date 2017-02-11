@@ -10,7 +10,7 @@ var kitties = [{
     "img": "img/crake.jpg",
     "index": 2,
     "clicks": 0
-  }]
+  }];
 
 // append cats
 var appendCats = function() {
@@ -28,20 +28,20 @@ var appendCats = function() {
     catEntry.appendChild(catName);
 
     var catClicks = document.createElement('p');
-    catClicks.id = 'clickCount';
+    catClicks.className = 'clickCount';
     catClicks.innerHTML = kitties[i].clicks;
     catEntry.appendChild(catClicks);
 
     var catImg = document.createElement('img');
+    catImg.className = 'catImg';
     catImg.src = kitties[i].img;
-    catImg.id = 'catImg'
     catEntry.appendChild(catImg);
   }
-}
+};
   appendCats();
 
 
-// event listener - counts the amount of clicks on a cat
+// event listener - counts the amount of clicks on a cat, returns new number
 
 /* event listener function:
   - target "catImg" id with var elem
@@ -55,16 +55,15 @@ var appendCats = function() {
 */
 
 var clickListen = function() {
-  var elem = document.getElementById('catImg');
-  var clickCount = document.getElementById('clickCount');
-  var num = clickCount.innerHTML;
-
+  var elem = document.getElementsByClassName('catImg');
+  var clickCount = document.getElementsByClassName('clickCount');
 
   for (i = 0; i < elem.length; i++) {
-    elem.addEventListener('click', function(){
-        num++;
-
+    elem[i].addEventListener('click', function(){
+      // var num = clickCount[i].innerHTML;
+        console.log(clickCount);
+        // num++;
   },false);
 }
+};
 clickListen();
-}
