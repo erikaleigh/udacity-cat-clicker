@@ -60,8 +60,9 @@ var clickListen = function() {
 
   for (i = 0; i < elem.length; i++) {
     elem[i].addEventListener('click', function(){
-      // var num = clickCount[i].innerHTML;
-        console.log(clickCount);
+      // do I need another for loop here to iterate through the clickCounts?
+      var num = clickCount.innerHTML;
+        console.log(num);
         // num++;
   },false);
 }
