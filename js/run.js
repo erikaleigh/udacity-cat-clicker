@@ -19,8 +19,7 @@ var appendCats = function() {
   for (var i = 0; i < kitties.length; i++) {
 
     var catEntry = document.createElement('div');
-    catEntry.id = 'cat';
-    catEntry.className = 'col-6';
+    catEntry.className = 'col-6 cat';
     catDiv.appendChild(catEntry);
 
     var catName = document.createElement('h3');
@@ -60,11 +59,15 @@ var clickListen = function() {
 
   for (i = 0; i < elem.length; i++) {
     var num = clickCount[i].innerHTML;
+    console.log(num); // logs the current number from clickCount
 
     elem[i].addEventListener('click', function(){
-          num++;
-          // clickCount.appendChild(num);
-          console.log(num);
+          var updateNum = num++;
+          console.log(updateNum); /* logs the increasing number from clickCount when you click */
+          var catEntry = document.getElementsByClassName('cat');
+          var p = document.createElement('p');
+          // p.appendChild(updateNum);
+          // catEntry.appendChild(p);
       });
 
   }false;
